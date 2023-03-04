@@ -1,13 +1,11 @@
-import { useState } from "react";
+import { ButtonFolow, Props } from "./Button.styled";
 
-import { ButtonFolow } from "./Button.styled";
-type Props = {
-  isFollow: boolean;
-};
-
-const Button: React.FC<Props> = ({ isFollow }) => {
+const Button: React.FC<Props> = ({ isFollow, setFollow }) => {
   return (
-    <ButtonFolow isFollow={isFollow}>
+    <ButtonFolow
+      isFollow={isFollow}
+      onClick={() => setFollow((prev: boolean) => !prev)}
+    >
       {isFollow ? "Follow" : "Following"}
     </ButtonFolow>
   );

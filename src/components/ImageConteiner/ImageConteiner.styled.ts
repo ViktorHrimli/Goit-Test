@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import heroImg from "../../assets/hero.png";
+const heroImg = require("../../assets/hero.png");
 
 const HeroImageConteiner = styled.div`
   width: 308px;

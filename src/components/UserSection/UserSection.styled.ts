@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-import user from "../../assets/Hansel.png";
 import { DefaultWrapper } from "../../styles/Global.styled";
+
+const user = require("../../assets/Hansel.png");
 
 const ConteinerUserPhoto = styled.div`
   position: relative;
@@ -9,7 +10,7 @@ const ConteinerUserPhoto = styled.div`
 
 const CentralLine = styled.div`
   width: 380px;
-  height: 5px;
+  height: 8px;
 
   margin-top: 18px;
 
@@ -24,7 +25,7 @@ const CirculUserPhoto = styled(DefaultWrapper)`
   top: 50%;
   left: 50%;
 
-  transform: translate(-50%, -34%);
+  transform: translate(-50%, -42%);
 
   flex-direction: row;
 

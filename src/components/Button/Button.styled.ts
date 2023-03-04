@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export type Props = {
+  isFollow: boolean;
+  setFollow?: any;
+};
+
 const ButtonFolow = styled.button`
   display: inline-flex;
   align-items: center;
@@ -21,9 +26,16 @@ const ButtonFolow = styled.button`
   border: none;
 
   color: #373737;
-  background: ${(p) => (p.isFollow ? "#ebd8ff" : "#5CD3A8")};
+  background: ${(p: Props) => (p.isFollow ? "#ebd8ff" : "#5CD3A8")};
 
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  transition: opacity 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  :hover {
+    cursor: pointer;
+
+    opacity: 0.8;
+  }
 `;
 
 export { ButtonFolow };

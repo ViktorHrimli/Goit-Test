@@ -2,7 +2,7 @@ import { WrapperCard } from "./Card.styled";
 
 import { ImageConteiner } from "../../components/ImageConteiner/ImageConteiner";
 import { UserSection } from "../UserSection/UserSection";
-import { ButtonInfo } from "../ButtonInfo/ButtonInfo";
+import { ButtonInfo } from "../Info/Info";
 
 const Card = () => {
   return (

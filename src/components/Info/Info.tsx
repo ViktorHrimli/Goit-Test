@@ -8,39 +8,29 @@ import {
 
 import { Button } from "../Button/Button";
 
-interface IObject {
-  text: string;
-  value: string;
-}
+import { IInfo } from "./types";
 
-const arrObj = [
-  { text: "tweets", value: "777" },
-  { text: "followers", value: "100500" },
-];
-
-const countFollowers = (item: IObject) => {
-  if (item["text"] === "tweets") {
-    return item.value;
+const countFollowers = (value: string) => {
+  if (value === "tweets") {
+    return value;
   } else {
-    return (
-      item.value.slice(0, 3) + "," + item.value.split("").splice(3).join("")
-    );
+    return value.slice(0, 3) + "," + value.split("").splice(3).join("");
   }
 };
 
-const ButtonInfo = () => {
+const ButtonInfo: React.FC<IInfo> = ({ followers, tweets }) => {
   const [isFollow, setIsFollow] = useState(false);
+
+  if (isFollow) followers = String(parseFloat(followers) + 1);
 
   return (
     <ButtonInfoConteiner>
       <InfoConteiner>
-        {/*  */}
-        {arrObj.map((item: IObject, idx) => (
-          <ParagraphInfo key={idx}>{`${countFollowers(item) || item.value} ${
-            item.text
-          }`}</ParagraphInfo>
-        ))}
-        {/*  */}
+        <ParagraphInfo>{tweets} tweets</ParagraphInfo>
+        <ParagraphInfo>
+          {followers.length > 5 ? countFollowers(followers) : followers}{" "}
+          followers
+        </ParagraphInfo>
       </InfoConteiner>
 
       <Button isFollow={isFollow} setFollow={setIsFollow} />

@@ -3,11 +3,6 @@ import styled from "styled-components";
 import { DefaultWrapper } from "../../styles/Global.styled";
 
 const WrapperCard = styled(DefaultWrapper)`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 30%);
-
   justify-content: flex-start;
 
   padding: 28px 36px 36px 36px;

@@ -6,12 +6,14 @@ import {
   BackgroundPhoto,
 } from "./UserSection.styled";
 
-const UserSection = () => {
+import { Props } from "./types";
+
+const UserSection: React.FC<Props> = ({ avatar }) => {
   return (
     <ConteinerUserPhoto>
       <CirculUserPhoto>
         <BackgroundPhoto>
-          <UserPhoto />
+          <UserPhoto avatar={avatar} />
         </BackgroundPhoto>
       </CirculUserPhoto>
       <CentralLine></CentralLine>

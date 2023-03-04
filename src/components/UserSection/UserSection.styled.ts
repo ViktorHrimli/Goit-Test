@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { DefaultWrapper } from "../../styles/Global.styled";
 
-const user = require("../../assets/Hansel.png");
+import { Props } from "./types";
 
 const ConteinerUserPhoto = styled.div`
   position: relative;
@@ -57,10 +57,12 @@ const UserPhoto = styled.div`
   width: 63px;
   height: 63px;
 
-  background-image: url(${user});
+  background-image: url(${(p: Props) => p.avatar});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  border-radius: 50%;
 `;
 
 export {

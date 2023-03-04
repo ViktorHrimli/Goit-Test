@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 const heroImg = require("../../assets/hero.png");
+const logo = require("../../assets/logoGoIt.jpg");
+
+const ImagesWrapper = styled.div`
+  position: relative;
+`;
 
 const HeroImageConteiner = styled.div`
   width: 308px;
@@ -15,8 +20,16 @@ const HeroImageConteiner = styled.div`
 const GoitLogo = styled.div`
   position: absolute;
 
-  top: 20px;
-  left: 20px;
+  width: 76px;
+  height: 22px;
+
+  background-image: url(${logo});
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  top: -15px;
+  left: -20px;
 `;
 
-export { HeroImageConteiner, GoitLogo };
+export { HeroImageConteiner, GoitLogo, ImagesWrapper };
